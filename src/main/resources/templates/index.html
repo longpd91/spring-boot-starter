@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin :: head">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <header th:replace="admin :: main_header"></header>
+    <aside th:replace="admin :: main_sidebar"></aside>
+    <!--<div th:replace="admin ::content_wrapper "></div>-->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                Dashboard
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+        <section class="content">
+            <p th:text="${param.q}">Test</p>
+        </section>
+    </div>
+    <footer th:replace="admin :: main_footer"></footer>
+    <aside th:replace="admin :: control_sidebar"></aside>
+</div>
+
+<div th:replace="admin :: js_layout"></div>
+</body>
+</html>
